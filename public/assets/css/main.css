@@ -1,0 +1,3820 @@
+/**
+* Template Name: BizLand
+* Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+* Updated: Jun 14 2024 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# Font & Color Variables
+# Help: https://bootstrapmade.com/color-system/
+--------------------------------------------------------------*/
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+:root {
+    --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Montserrat", sans-serif;
+    --nav-font: "Open Sans", sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root {
+    --background-color: #ffffff;
+    /* Background color for the entire website, including individual sections */
+    --default-color: #444444;
+    /* Default color used for the majority of the text content across the entire website */
+    --heading-color: #222222;
+    /* Color for headings, subheadings and title throughout the website */
+    --accent-color: #33609F;
+    /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --contrast-color: #ffffff;
+    /* The contrast color is used for elements when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+    --nav-color: #222222;
+    /* The default color of the main navmenu links */
+    --nav-hover-color: #106eea;
+    /* Applied to main navmenu links when they are hovered over or active */
+    --nav-dropdown-background-color: #ffffff;
+    /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+    --nav-dropdown-color: #222222;
+    /* Used for navigation links of the dropdown items in the navigation menu. */
+    --nav-dropdown-hover-color: #106eea;
+    /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+/* Smooth scroll */
+:root {
+    scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-family: var(--default-font);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: color-mix(in srgb, var(--accent-color), transparent 25%);
+    text-decoration: none;
+}
+
+h4,
+h6 {
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+}
+
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+.header {
+    color: var(--default-color);
+    transition: all 0.5s;
+    z-index: 997;
+    background-color: var(--background-color);
+}
+
+.header .topbar {
+    background-color: var(--accent-color);
+    height: 50px;
+    padding: 0;
+    font-size: 15px;
+    transition: all 0.5s;
+    font-weight: 500;
+    letter-spacing: .5px;
+}
+
+.header .topbar .contact-info i {
+    font-style: normal;
+    color: var(--contrast-color);
+}
+
+.header .topbar .contact-info i a,
+.header .topbar .contact-info i span {
+    padding-left: 5px;
+    color: var(--contrast-color);
+}
+
+@media (min-width: 300px) and (max-width: 466px) {
+    .about.section {
+        height: 6rem !important;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+    [data-aos-delay] {
+        transition-delay: 0 !important;
+    }
+
+    .footer .footer-newsletter {
+        padding: 618px 0px 60px 0px !important;
+    }
+
+    .grid-container {
+        grid-template-columns: auto auto !important;
+    }
+}
+
+@media (max-width: 575px) {
+    p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .header .topbar .contact-info i a,
+    .header .topbar .contact-info i span {
+        font-size: 10px;
+    }
+
+    .header .topbar {
+        font-size: 11px;
+    }
+
+    .header .logo {
+        width: 200px;
+    }
+
+    .search {
+
+        width: 100%;
+        margin: 0px 20px;
+
+    }
+
+    .showcase {
+        height: 328px !important;
+    }
+
+    .showcase .overlay {
+        height: 328px !important;
+    }
+
+    .post-testimonial {
+        width: 80% !important;
+    }
+
+    .about-content h3 {
+        font-size: 27px !important;
+    }
+
+    .about-content p {
+        font-size: 14px !important;
+        line-height: 27.4px !important;
+    }
+
+    .showcase p {
+        font-size: 18px !important;
+    }
+
+    .border-box h4 {
+        font-size: 14px !important;
+    }
+
+    .grid-container {
+        grid-template-columns: auto !important;
+    }
+
+    #newLetter.section .col-xl-3 {
+        margin-bottom: 15px;
+    }
+
+    .footer .footer-newsletter {
+        padding: 655px 0px 60px 0px !important;
+    }
+
+    #newLetter .card .card-header {
+        margin-top: 14px !important;
+    }
+
+    .about.section {
+        height: 10rem !important;
+    }
+
+    .about-section p {
+        line-height: 34px !important;
+    }
+
+    .about-contentt {
+        padding-top: 55px !important;
+    }
+
+    .about-contentt .h2 {
+        font-size: 26px !important;
+    }
+
+    .about-contentt .text {
+        line-height: 24px !important;
+        /* word-spacing: 5px !important; */
+        font-size: 14px !important;
+    }
+
+    /* CONTACT */
+    .contact-us.section {
+        height: 115px !important;
+    }
+
+    .contact-us h1 {
+        height: 0% !important;
+        top: 160px !important;
+        font-size: 30px !important;
+        font-weight: 600 !important;
+    }
+
+    .contact-us.section .container .image {
+        height: 14% !important;
+        top: 160px !important;
+        margin: 30px 20px !important;
+    }
+
+    .contact-part {
+        padding-top: 0rem !important;
+        margin-top: 0rem !important;
+    }
+
+    .contact-part img {
+        padding: 70px 18px 40px 18px;
+    }
+
+    .php-email-form .row .col-md-6 {
+        margin-top: 5px;
+    }
+
+    .contact-part .php-email-form {
+        height: 100%;
+        padding: 50px 20px !important;
+    }
+
+    .contact-part .php-email-form input[type="text"],
+    .contact-part .php-email-form input[type="email"],
+    .contact-part .php-email-form textarea,
+    .contact-part .php-email-form select {
+        font-size: 11px !important;
+
+    }
+
+    .form-control.code {
+        padding: 3px !important;
+    }
+
+    th,
+    td {
+        font-size: 12px !important;
+    }
+
+
+
+
+
+    .table-bordered> :not(caption)>*>* {
+        font-size: 10px !important;
+    }
+
+    .tabel-content {
+        margin: 14px;
+    }
+
+    .logo-set {
+        margin: 0px !important;
+        padding: 12px !important;
+    }
+
+
+    .homeloan.section {
+        height: 138px !important;
+    }
+
+    .homeloan h1 {
+        height: 0% !important;
+        top: 165px !important;
+        text-align: center;
+    }
+
+    .homeloan.section .container .image {
+        height: 14% !important;
+        top: 185px !important;
+        margin: 30px 20px !important;
+        background-size: cover !important;
+    }
+
+    .homeloan-content {
+        padding-top: 55px !important;
+    }
+
+    .homeloan-content .h2 {
+        font-size: 26px !important;
+    }
+
+    .homeloan-content .text {
+        line-height: 24px !important;
+        /* word-spacing: 5px !important; */
+        font-size: 14px !important;
+    }
+
+    .homeloan-progress h5 {
+        font-size: 15px !important;
+    }
+
+    .homeloan-progress .card .card-body img {
+        width: 45px;
+        height: 45px !important;
+    }
+
+    .homeloan-progress .card .card-body span {
+        width: 165px;
+        font-size: 12px !important;
+    }
+
+    .homeloan-progress .card .card-body button {
+        height: auto !important;
+        font-size: 14px;
+    }
+
+    .homeloan-progress .card .card-footer h6 {
+        font-size: 12px !important;
+    }
+
+    /* AGAINST PROPERTY */
+    .againstPropertyLoan.section {
+        height: 144px !important;
+    }
+
+    .againstPropertyLoan h1 {
+        height: 8% !important;
+        top: 160px !important;
+        text-align: center;
+    }
+
+    .againstPropertyLoan.section .container .image {
+        height: 14% !important;
+        top: 185px !important;
+        margin: 30px 20px !important;
+        background-size: cover !important;
+    }
+
+    .againstPropertyLoan-content {
+        padding-top: 55px !important;
+    }
+
+    .againstPropertyLoan-content .h2 {
+        font-size: 26px !important;
+    }
+
+    .againstPropertyLoan-content .text {
+        line-height: 24px !important;
+        /* word-spacing: 5px !important; */
+        font-size: 14px !important;
+    }
+
+    .againstPropertyLoan-progress h5 {
+        font-size: 15px !important;
+    }
+
+    .againstPropertyLoan-progress .card .card-body img {
+        width: 45px;
+        height: 45px !important;
+    }
+
+    .againstPropertyLoan-progress .card .card-body span {
+        width: 165px;
+        font-size: 12px !important;
+    }
+
+    .againstPropertyLoan-progress .card .card-body button {
+        height: auto !important;
+        font-size: 14px;
+    }
+
+    .againstPropertyLoan-progress .card .card-footer h6 {
+        font-size: 12px !important;
+    }
+
+
+    /* PERSONAL LOAN */
+    .personalLoan.section {
+        height: 160px !important;
+    }
+
+    .personalLoan h1 {
+        height: 8% !important;
+        top: 160px !important;
+        text-align: center;
+    }
+
+    .personalLoan.section .container .image {
+        height: 14% !important;
+        top: 205px !important;
+        margin: 30px 20px !important;
+        background-size: cover !important;
+    }
+
+    .personalLoan-content {
+        padding-top: 55px !important;
+    }
+
+    .personalLoan-content .h2 {
+        font-size: 26px !important;
+    }
+
+    .personalLoan-content .text {
+        line-height: 24px !important;
+        /* word-spacing: 5px !important; */
+        font-size: 14px !important;
+    }
+
+    .personalLoan-progress h5 {
+        font-size: 15px !important;
+    }
+
+    .personalLoan-progress .card .card-body img {
+        width: 45px;
+        height: 45px !important;
+    }
+
+    .personalLoan-progress .card .card-body span {
+        width: 165px;
+        font-size: 12px !important;
+    }
+
+    .personalLoan-progress .card .card-body button {
+        height: auto !important;
+        font-size: 14px;
+    }
+
+    .personalLoan-progress .card .card-footer h6 {
+        font-size: 12px !important;
+    }
+
+    /* BUSINESS LOAN */
+    .businessLoan.section {
+        height: 160px !important;
+    }
+
+    .businessLoan h1 {
+        height: 8% !important;
+        top: 160px !important;
+        text-align: center;
+    }
+
+    .businessLoan.section .container .image {
+        height: 14% !important;
+        top: 205px !important;
+        margin: 30px 20px !important;
+        background-size: cover !important;
+    }
+
+    .businessLoan-content {
+        padding-top: 55px !important;
+    }
+
+    .businessLoan-content .h2 {
+        font-size: 26px !important;
+    }
+
+    .businessLoan-content .text {
+        line-height: 24px !important;
+        /* word-spacing: 5px !important; */
+        font-size: 14px !important;
+    }
+
+    .businessLoan-progress h5 {
+        font-size: 15px !important;
+    }
+
+    .businessLoan-progress .card .card-body img {
+        width: 45px;
+        height: 45px !important;
+    }
+
+    .businessLoan-progress .card .card-body span {
+        width: 165px;
+        font-size: 12px !important;
+    }
+
+    .businessLoan-progress .card .card-body button {
+        height: auto !important;
+        font-size: 14px;
+    }
+
+    .businessLoan-progress .card .card-footer h6 {
+        font-size: 12px !important;
+    }
+
+
+
+    /* CAPITAL LOAN */
+    .capital.section {
+        height: 160px !important;
+    }
+
+    .capital h1 {
+        height: 8% !important;
+        top: 160px !important;
+        text-align: center;
+    }
+
+    .capital.section .container .image {
+        height: 14% !important;
+        top: 205px !important;
+        margin: 30px 20px !important;
+        background-size: cover !important;
+    }
+
+    .capital-content {
+        padding-top: 55px !important;
+    }
+
+    .capital-content .h2 {
+        font-size: 26px !important;
+    }
+
+    .capital-content .text {
+        line-height: 24px !important;
+        /* word-spacing: 5px !important; */
+        font-size: 14px !important;
+    }
+
+    .capital-progress h5 {
+        font-size: 15px !important;
+    }
+
+    .capital-progress .card .card-body img {
+        width: 45px;
+        height: 45px !important;
+    }
+
+    .capital-progress .card .card-body span {
+        width: 165px;
+        font-size: 12px !important;
+    }
+
+    .capital-progress .card .card-body button {
+        height: auto !important;
+        font-size: 14px;
+    }
+
+    .capital-progress .card .card-footer h6 {
+        font-size: 12px !important;
+    }
+
+
+
+    .range1,
+    .range2,
+    .range3 {
+        padding: 0px 0px !important;
+    }
+
+    .input-amount::placeholder {
+        font-size: 14px !important;
+    }
+
+    .input-amount-wrapper {
+        /* position: relative; */
+        width: 8rem;
+    }
+
+    .rupee-icon {
+        font-size: 17px !important;
+    }
+
+    .slider-wrapper {
+        margin: 18px 0px 68px 0px !important;
+    }
+
+    .noUi-value {
+        font-size: 10px !important;
+        font-weight: 500 !important;
+    }
+
+    .noUi-horizontal {
+        height: 5px !important;
+    }
+
+    .noUi-horizontal .noUi-handle {
+        width: 16px !important;
+        height: 16px !important;
+        right: -8px !important;
+        top: -5px !important;
+    }
+
+    .enquiry-form h2 {
+        font-size: 25px !important;
+    }
+
+    .enquiry-form label {
+        font-size: 12px;
+    }
+
+    .query-button .btn {
+        padding: 10px 6px !important;
+        font-size: 13px !important;
+    }
+
+    .input-amount-wrapper input {
+        width: 100%;
+    }
+}
+
+.header .topbar .contact-info i a {
+    line-height: 0;
+    transition: 0.3s;
+}
+
+.header .topbar .contact-info i a:hover {
+    color: var(--contrast-color);
+    text-decoration: underline;
+}
+
+.header .topbar .social-links a {
+    color: color-mix(in srgb, var(--contrast-color), transparent 40%);
+    line-height: 0;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
+.header .topbar .social-links a:hover {
+    color: var(--contrast-color);
+}
+
+.header .branding {
+    min-height: 60px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ededed;
+}
+
+.header .logo {
+    line-height: 1;
+}
+
+.header .logo img {
+    max-height: 36px;
+    margin-right: 8px;
+}
+
+.header .logo h1 {
+    font-size: 30px;
+    margin: 0;
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+.header .logo span {
+    color: var(--accent-color);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.scrolled .header {
+    box-shadow: 0px 0 18px color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.search {
+    background-image: url(../img/search.png);
+    background-repeat: no-repeat;
+    background-position: 11px 10px;
+    background-size: 8px;
+    padding: 10px 20px 12px 30px !important;
+    border: 1px solid var(--accent-color);
+    border-radius: 30px;
+    height: 30px;
+    width: 150px;
+    box-shadow: 0px 2px 7px 0px lightgrey;
+}
+
+.search::placeholder {
+    font-size: 11px;
+    color: var(--accent-color);
+}
+
+.product_title {
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.card.home-card {
+    border: none;
+    box-shadow: 0px 4px 7px 2px rgb(230 229 229 / 76%);
+}
+
+.card.home-card:hover {
+    box-shadow: 0px 4px 7px 2px #33609f61;
+    transition: .3s;
+}
+
+.card.home-card h5 {
+    font-weight: 700;
+}
+
+.card.home-card p {
+    font-size: 13px;
+}
+
+.explore_link {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.slick-list {
+    height: 204px;
+    padding: 10px 15px;
+}
+
+.slick-initialized .slick-slide {
+    margin: 0 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabel-content {
+    margin: 60px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Navmenu - Desktop */
+@media (min-width: 1200px) {
+    .navmenu {
+        padding: 0;
+    }
+
+    .navmenu ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+
+    .navmenu li {
+        position: relative;
+    }
+
+    .navmenu a,
+    .navmenu a:focus {
+        color: var(--nav-color);
+        padding: 18px 15px;
+        font-size: 14px;
+        font-family: var(--nav-font);
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        transition: 0.3s;
+    }
+
+    .navmenu a i,
+    .navmenu a:focus i {
+        font-size: 12px;
+        line-height: 0;
+        margin-left: 5px;
+        transition: 0.3s;
+    }
+
+    .navmenu li:last-child a {
+        padding-right: 0;
+    }
+
+    .navmenu li>a,
+    .navmenu .active,
+    .navmenu .active:focus {
+        color: var(--accent-color);
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .navmenu .dropdown ul {
+        margin: 0;
+        padding: 10px 0;
+        background: var(--nav-dropdown-background-color);
+        display: block;
+        position: absolute;
+        visibility: hidden;
+        left: 14px;
+        top: 130%;
+        opacity: 0;
+        transition: 0.3s;
+        border-radius: 4px;
+        z-index: 99;
+        box-shadow: 0px 0px 30px color-mix(in srgb, var(--default-color), transparent 85%);
+    }
+
+    .navmenu .dropdown ul li {
+        min-width: 200px;
+    }
+
+    .navmenu .dropdown ul a {
+        padding: 10px 20px;
+        font-size: 15px;
+        text-transform: none;
+        color: var(--nav-dropdown-color);
+    }
+
+    .navmenu .dropdown ul a i {
+        font-size: 12px;
+    }
+
+    .navmenu .dropdown ul a:hover,
+    .navmenu .dropdown ul .active:hover,
+    .navmenu .dropdown ul li:hover>a {
+        color: var(--nav-dropdown-hover-color);
+    }
+
+    .navmenu .dropdown:hover>ul {
+        opacity: 1;
+        top: 100%;
+        visibility: visible;
+    }
+
+    .navmenu .dropdown .dropdown ul {
+        top: 0;
+        left: -90%;
+        visibility: hidden;
+    }
+
+    .navmenu .dropdown .dropdown:hover>ul {
+        opacity: 1;
+        top: 0;
+        left: -100%;
+        visibility: visible;
+    }
+}
+
+/* Navmenu - Mobile */
+@media (max-width: 1199px) {
+    .mobile-nav-toggle {
+        color: var(--nav-color);
+        font-size: 28px;
+        line-height: 0;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    .navmenu {
+        padding: 0;
+        z-index: 9997;
+    }
+
+    .navmenu ul {
+        display: none;
+        position: absolute;
+        inset: 60px 20px 20px 20px;
+        padding: 10px 0;
+        margin: 0;
+        border-radius: 6px;
+        background-color: var(--nav-dropdown-background-color);
+        overflow-y: auto;
+        transition: 0.3s;
+        z-index: 9998;
+        box-shadow: 0px 0px 30px color-mix(in srgb, var(--default-color), transparent 90%);
+    }
+
+    .navmenu a,
+    .navmenu a:focus {
+        color: var(--nav-dropdown-color);
+        padding: 10px 20px;
+        font-family: var(--nav-font);
+        font-size: 17px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        transition: 0.3s;
+    }
+
+    .navmenu a i,
+    .navmenu a:focus i {
+        font-size: 12px;
+        line-height: 0;
+        margin-left: 5px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: 0.3s;
+        background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+    }
+
+    .navmenu a i:hover,
+    .navmenu a:focus i:hover {
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+    }
+
+    .navmenu a:hover,
+    .navmenu .active,
+    .navmenu .active:focus {
+        color: var(--nav-dropdown-hover-color);
+    }
+
+    .navmenu .active i,
+    .navmenu .active:focus i {
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+        transform: rotate(180deg);
+    }
+
+    .navmenu .dropdown ul {
+        position: static;
+        display: none;
+        z-index: 99;
+        padding: 10px 0;
+        margin: 10px 20px;
+        background-color: var(--nav-dropdown-background-color);
+        border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+        box-shadow: none;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .navmenu .dropdown ul ul {
+        background-color: rgba(33, 37, 41, 0.1);
+    }
+
+    .navmenu .dropdown>.dropdown-active {
+        display: block;
+        background-color: rgba(33, 37, 41, 0.03);
+    }
+
+    .mobile-nav-active {
+        overflow: hidden;
+    }
+
+    .mobile-nav-active .mobile-nav-toggle {
+        color: #fff;
+        position: absolute;
+        font-size: 32px;
+        top: 15px;
+        right: 15px;
+        margin-right: 0;
+        z-index: 9999;
+    }
+
+    .mobile-nav-active .navmenu {
+        position: fixed;
+        overflow: hidden;
+        inset: 0;
+        background: rgba(33, 37, 41, 0.8);
+        transition: 0.3s;
+    }
+
+    .mobile-nav-active .navmenu>ul {
+        display: block;
+    }
+}
+
+/*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
+.footer {
+    color: #ffffff;
+    background-color: var(--accent-color);
+    font-size: 14px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.footer .footer-newsletter {
+    background-color: #4EBEE7;
+    padding: 130px 0;
+}
+
+.footer .footer-newsletter h4 {
+    font-size: 30px;
+    color: #fff;
+}
+
+.footer .footer-newsletter .newsletter-form {
+    margin-top: 30px;
+    padding: 10px 8px;
+    position: relative;
+    background-color: var(--contrast-color);
+    border: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+    box-shadow: 0px 2px 25px color-mix(in srgb, var(--accent-color), transparent 90%);
+    display: flex;
+    transition: 0.3s;
+    border-radius: 30px;
+}
+
+.footer .footer-newsletter .newsletter-form:focus-within {
+    border-color: var(--accent-color);
+}
+
+.footer .footer-newsletter .newsletter-form input[type=email] {
+    border: 0;
+    padding: 4px;
+    width: 100%;
+    background-color: var(--contrast-color);
+    color: var(--default-color);
+}
+
+.footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
+    outline: none;
+}
+
+.footer .footer-newsletter .newsletter-form input[type=submit] {
+    border: 0;
+    font-size: 16px;
+    padding: 0 20px;
+    margin: -11px -9px -11px 0;
+    background: #D9D9D9;
+    color: #363636;
+    transition: 0.3s;
+    border-radius: 0 30px 30px 0;
+    font-weight: 600;
+}
+
+.footer .footer-newsletter .newsletter-form input[type=submit]:hover {
+    background: color-mix(in srgb, var(--accent-color), transparent 20%);
+    color: #fff;
+}
+
+.footer .footer-newsletter .error-message {
+    display: none;
+    background: #df1529;
+    color: #ffffff;
+    text-align: left;
+    padding: 15px;
+    margin-top: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.footer .footer-newsletter .sent-message {
+    display: none;
+    color: #ffffff;
+    background: #059652;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.footer .footer-newsletter .loading {
+    display: none;
+    background: var(--background-color);
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.footer .footer-newsletter .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid var(--accent-color);
+    border-top-color: var(--background-color);
+    animation: subscription-loading 1s linear infinite;
+}
+
+@keyframes subscription-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.footer .footer-top {
+    padding-top: 50px;
+}
+
+.footer .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+    font-size: 16px;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.footer h4 {
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+}
+
+.footer .footer-links {
+    margin-bottom: 30px;
+}
+
+.footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .footer-links ul i {
+    margin-right: 3px;
+    font-size: 12px;
+    line-height: 0;
+    color: var(--accent-color);
+}
+
+.footer .footer-links ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer .footer-links ul li:first-child {
+    padding-top: 0;
+}
+
+.footer .footer-links ul a {
+    display: inline-block;
+    color: #fff;
+    line-height: 1;
+}
+
+.footer .footer-links ul a:hover {
+    color: #fff;
+}
+
+.footer .footer-about a {
+    color: var(--heading-color);
+    font-size: 24px;
+    font-weight: 600;
+    font-family: var(--heading-font);
+    width: 245px;
+}
+
+.footer .footer-contact p {
+    margin-bottom: 5px;
+}
+
+.footer .copyright {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid #b7b7b7;
+}
+
+.footer .copyright p {
+    margin-bottom: 0;
+}
+
+.footer .credits {
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+.footer-contact .footer_content {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer-contact .footer_content i {
+    font-size: 25px;
+}
+
+.footer-contact .footer_content span {
+    font-weight: 300;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background-color: var(--background-color);
+    transition: all 0.6s ease-out;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#preloader div {
+    width: 13px;
+    height: 13px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    position: absolute;
+    left: 50%;
+}
+
+#preloader div:nth-child(1) {
+    left: calc(50% + 8px);
+    animation: animate-preloader-1 0.6s infinite;
+}
+
+#preloader div:nth-child(2) {
+    left: calc(50% + 8px);
+    animation: animate-preloader-2 0.6s infinite;
+}
+
+#preloader div:nth-child(3) {
+    left: calc(50% + 32px);
+    animation: animate-preloader-2 0.6s infinite;
+}
+
+#preloader div:nth-child(4) {
+    left: calc(50% + 56px);
+    animation: animate-preloader-3 0.6s infinite;
+}
+
+@keyframes animate-preloader-1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes animate-preloader-3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes animate-preloader-2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
+.scroll-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 99999;
+    background-color: var(--accent-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.4s;
+}
+
+.scroll-top i {
+    font-size: 24px;
+    color: var(--contrast-color);
+    line-height: 0;
+}
+
+.scroll-top:hover {
+    background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+    color: var(--contrast-color);
+}
+
+.scroll-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Global Page Titles & Breadcrumbs
+--------------------------------------------------------------*/
+.page-title {
+    --background-color: color-mix(in srgb, var(--default-color), transparent 96%);
+    color: var(--default-color);
+    background-color: var(--background-color);
+    padding: 25px 0;
+    position: relative;
+}
+
+.page-title h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.page-title .breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.page-title .breadcrumbs ol li+li {
+    padding-left: 10px;
+}
+
+.page-title .breadcrumbs ol li+li::before {
+    content: "/";
+    display: inline-block;
+    padding-right: 10px;
+    color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.error.text-danger {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+#loader-wrapper {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+section,
+.section {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    padding: 60px 0px 45px 0;
+    scroll-margin-top: 118px;
+    overflow: clip;
+}
+
+@media (max-width: 1199px) {
+
+    section,
+    .section {
+        scroll-margin-top: 100px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+    text-align: center;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 8px 20px;
+    margin: 0;
+    background: color-mix(in srgb, var(--accent-color), transparent 90%);
+    color: var(--accent-color);
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 50px;
+    font-family: var(--default-font);
+}
+
+.section-title p {
+    color: var(--heading-color);
+    font-size: 30px;
+    /* font-family: var(--heading-font); */
+}
+
+.about_title2 {
+    font-weight: 600;
+}
+
+.section-title p .description-title {
+    color: var(--accent-color);
+}
+
+
+.bg-ECF1F2 {
+    background-color: #ECF1F2;
+}
+
+.table-primary {
+    --bs-table-bg: var(--accent-color) !important;
+    --bs-table-color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+    width: 100%;
+    min-height: 65vh;
+    position: relative;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    /* background: url("../img/hero-bg.jpg") top left; */
+    background-size: cover;
+    box-shadow: 0px 0px 7px 2px lightgrey;
+}
+
+.hero:before {
+    content: "";
+    background: color-mix(in srgb, var(--contrast-color), transparent 30%);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.hero .container {
+    position: relative;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 59px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: -1px;
+    word-spacing: 3px;
+    line-height: 74px;
+    font-family: "Roboto Flex", sans-serif;
+}
+
+.hero h1 span {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.hero p {
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    margin: 5px 0 30px 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.hero .btn-get-started {
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    font-family: var(--heading-font);
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 4px;
+    transition: 0.5s;
+    box-shadow: 0 8px 28px color-mix(in srgb, var(--accent-color), transparent 80%);
+}
+
+.hero .btn-get-started:hover {
+    color: var(--contrast-color);
+    background: color-mix(in srgb, var(--accent-color), transparent 15%);
+    box-shadow: 0 8px 28px color-mix(in srgb, var(--accent-color), transparent 55%);
+}
+
+.hero .btn-watch-video {
+    transition: 0.5s;
+    margin-left: 12px;
+    border-radius: 8px;
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    /* box-shadow: 0px 3px 5px 0px #33609f9e; */
+
+}
+
+.hero .btn-watch-video i {
+    color: #ffffff;
+    font-size: 36px;
+    transition: 0.3s;
+    line-height: 0;
+    margin-right: 0px;
+}
+
+.hero .btn-watch-video:hover {
+    color: var(--accent-color);
+}
+
+.hero .btn-watch-video:hover i {
+    color: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+.hero .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+.form-control.input_number {
+    display: block;
+    width: 62%;
+    padding: .5rem 1.3rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: 2px solid #a9adb1;
+    border-radius: var(--bs-border-radius);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    /* box-shadow: 0px 3px 5px 0px #d7d7d7; */
+
+}
+
+.form-control.input_number::placeholder {
+    font-size: 18px;
+    color: lightgrey;
+}
+
+.image_holder {
+    max-width: 520px;
+    max-height: auto;
+}
+
+@media (max-width: 640px) {
+    .hero h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+
+    .hero .btn-get-started,
+    .hero .btn-watch-video {
+        font-size: 13px;
+    }
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/*--------------------------------------------------------------
+# Featured Services Section
+--------------------------------------------------------------*/
+.featured-services .service-item {
+    box-shadow: 0px 0 25px 0 color-mix(in srgb, var(--default-color), transparent 90%);
+    padding: 50px 30px;
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.featured-services .service-item:before {
+    content: "";
+    position: absolute;
+    background: var(--accent-color);
+    inset: 100% 0 0 0;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+.featured-services .service-item .icon {
+    margin-bottom: 10px;
+}
+
+.featured-services .service-item .icon i {
+    color: var(--accent-color);
+    font-size: 36px;
+    transition: ease-in-out 0.3s;
+}
+
+.featured-services .service-item h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.featured-services .service-item h4 a {
+    color: var(--heading-color);
+    transition: ease-in-out 0.3s;
+}
+
+.featured-services .service-item p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+    transition: ease-in-out 0.3s;
+}
+
+.featured-services .service-item:hover h4 a,
+.featured-services .service-item:hover .icon i,
+.featured-services .service-item:hover p {
+    color: var(--contrast-color);
+}
+
+.featured-services .service-item:hover:before {
+    background: var(--accent-color);
+    inset: 0;
+    border-radius: 0px;
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+
+.about-content h3 {
+    font-weight: 700 !important;
+    font-size: 40px;
+    color: #000000;
+}
+
+.about .about-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about .about-content ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 35px;
+}
+
+.about .about-content ul li:first-child {
+    margin-top: 35px;
+}
+
+.about .about-content ul i {
+    background: var(--contrast-color);
+    box-shadow: 0px 6px 15px color-mix(in srgb, var(--accent-color), transparent 90%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    font-size: 24px;
+    margin-right: 15px;
+    color: var(--accent-color);
+    border-radius: 50px;
+}
+
+.about .about-content ul h4 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 32.4px;
+}
+
+.about .about-content p:last-child {
+    margin-bottom: 0;
+}
+
+.about-section {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    padding: 30px 0;
+    scroll-margin-top: 118px;
+    overflow: clip;
+}
+
+.read_more {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/*--------------------------------------------------------------
+# Skills Section
+--------------------------------------------------------------*/
+.skills .progress {
+    height: 60px;
+    display: block;
+    background: none;
+    border-radius: 0;
+}
+
+.skills .progress .skill {
+    color: var(--heading-color);
+    padding: 0;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: var(--heading-font);
+}
+
+.skills .progress .skill .val {
+    float: right;
+    font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+    background: color-mix(in srgb, var(--default-color), transparent 90%);
+    height: 10px;
+}
+
+.skills .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Stats Section
+--------------------------------------------------------------*/
+.stats i {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    border: 6px solid var(--contrast-color);
+    width: 64px;
+    height: 64px;
+    font-size: 24px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.stats .stats-item {
+    background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+    margin-top: -32px;
+    padding: 40px 30px 35px 30px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    border-radius: 4px;
+    z-index: 0;
+}
+
+.stats .stats-item span {
+    font-size: 36px;
+    display: block;
+    font-weight: 700;
+}
+
+.stats .stats-item p {
+    padding: 0;
+    margin: 0;
+    font-family: var(--heading-font);
+    font-size: 16px;
+}
+
+/*--------------------------------------------------------------
+# Clients Section
+--------------------------------------------------------------*/
+.clients {
+    --background-color: color-mix(in srgb, var(--accent-color), transparent 96%);
+    padding: 25px 0;
+}
+
+.clients .swiper {
+    padding: 10px 0;
+}
+
+.clients .swiper-wrapper {
+    height: auto;
+}
+
+.clients .swiper-slide img {
+    transition: 0.3s;
+}
+
+.clients .swiper-slide img:hover {
+    transform: scale(1.1);
+}
+
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.services .service-item {
+    text-align: center;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+    padding: 80px 20px;
+    transition: border ease-in-out 0.3s;
+    height: 100%;
+}
+
+.services .service-item .icon {
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    background: var(--accent-color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.services .service-item .icon i {
+    color: var(--contrast-color);
+    font-size: 28px;
+    transition: ease-in-out 0.3s;
+}
+
+.services .service-item h3 {
+    font-weight: 700;
+    margin: 10px 0 15px 0;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.services .service-item p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.services .service-item:hover {
+    border-color: var(--accent-color);
+}
+
+.services .service-item:hover h3 {
+    color: var(--accent-color);
+}
+
+.showcase {
+    width: 100%;
+    height: 394px;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.showcase img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.showcase .overlay {
+    width: 100%;
+    height: 394px;
+    background-color: #4ebee7b8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.post-testimonial {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.showcase p {
+    margin-top: 8px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.border-box h4 {
+    color: #FFF;
+    border: 2px solid #fff;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 40px;
+}
+
+/*--------------------------------------------------------------
+# Testimonials Section
+--------------------------------------------------------------*/
+#testimonials img {
+    background-color: #4ebee79a;
+    /* Add the desired background color */
+    background-size: cover;
+    /* Ensure the background image covers the entire element */
+    background-position: center;
+    padding: 80px 0;
+    position: relative;
+}
+
+.testimonials:before {
+    content: "";
+    background: color-mix(in srgb, var(--background-color), transparent 30%);
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.testimonials .testimonials-bg {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.testimonials .container {
+    position: relative;
+    z-index: 3;
+}
+
+.testimonials .testimonials-carousel,
+.testimonials .testimonials-slider {
+    overflow: hidden;
+}
+
+.testimonials .testimonial-item {
+    text-align: center;
+}
+
+.testimonials .testimonial-item .testimonial-img {
+    width: 100px;
+    border-radius: 50%;
+    border: 6px solid color-mix(in srgb, var(--default-color), transparent 85%);
+    margin: 0 auto;
+}
+
+.testimonials .testimonial-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+}
+
+.testimonials .testimonial-item h4 {
+    font-size: 14px;
+    margin: 0 0 15px 0;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.testimonials .testimonial-item .stars {
+    margin-bottom: 15px;
+}
+
+.testimonials .testimonial-item .stars i {
+    color: #ffc107;
+    margin: 0 1px;
+}
+
+.testimonials .testimonial-item .quote-icon-left,
+.testimonials .testimonial-item .quote-icon-right {
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+    font-size: 26px;
+    line-height: 0;
+}
+
+.testimonials .testimonial-item .quote-icon-left {
+    display: inline-block;
+    left: -5px;
+    position: relative;
+}
+
+.testimonials .testimonial-item .quote-icon-right {
+    display: inline-block;
+    right: -5px;
+    position: relative;
+    top: 10px;
+    transform: scale(-1, -1);
+}
+
+.testimonials .testimonial-item p {
+    font-style: italic;
+    margin: 0 auto 15px auto;
+}
+
+.testimonials .swiper-wrapper {
+    height: auto;
+}
+
+.testimonials .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: color-mix(in srgb, var(--default-color), transparent 50%);
+    opacity: 0.5;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--default-color);
+    opacity: 1;
+}
+
+@media (min-width: 992px) {
+    .testimonials .testimonial-item p {
+        width: 80%;
+    }
+
+}
+
+/*--------------------------------------------------------------
+# Portfolio Section
+--------------------------------------------------------------*/
+.portfolio h1 {
+    color: #000000;
+    font-weight: 700;
+}
+
+.portfolio .description-title {
+    color: var(--accent-color);
+}
+
+.portfolio .portfolio-filters {
+    padding: 0;
+    margin: 0 auto 20px auto;
+    list-style: none;
+    text-align: center;
+}
+
+.portfolio .portfolio-filters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 20px 10px 20px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    font-family: var(--heading-font);
+}
+
+.portfolio .portfolio-filters li:hover,
+.portfolio .portfolio-filters li.filter-active {
+    color: var(--contrast-color);
+    background-color: var(--accent-color);
+}
+
+.portfolio .portfolio-filters li:first-child {
+    margin-left: 0;
+}
+
+.portfolio .portfolio-filters li:last-child {
+    margin-right: 0;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 38px;
+    padding: 10px;
+}
+
+.grid-container>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.grid-container h6 {
+    word-spacing: 2px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.grid-container .card {
+    padding: 10px;
+    border: none;
+}
+
+.grid-container .card-header {
+    background: none;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.bg-ECF1F2 {
+    background-color: #ECF1F2;
+}
+
+.bg-33609F {
+    color: var(--accent-color);
+}
+
+.bg-FAFAFA {
+    background-color: #FAFAFA;
+}
+
+.bg-F1F5F6 {
+    background: #def8ff;
+}
+
+.form-control.code {
+    padding: 10px !important;
+}
+
+
+@media (max-width: 575px) {
+    .portfolio .portfolio-filters li {
+        font-size: 14px;
+        margin: 0 0 10px 0;
+    }
+}
+
+.portfolio .portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio .portfolio-item .portfolio-info {
+    opacity: 0;
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: -100%;
+    z-index: 3;
+    transition: all ease-in-out 0.5s;
+    background: color-mix(in srgb, var(--background-color), transparent 10%);
+    padding: 15px;
+}
+
+.portfolio .portfolio-item .portfolio-info h4 {
+    font-size: 18px;
+    font-weight: 600;
+    padding-right: 50px;
+}
+
+.portfolio .portfolio-item .portfolio-info p {
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    font-size: 14px;
+    margin-bottom: 0;
+    padding-right: 50px;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link,
+.portfolio .portfolio-item .portfolio-info .details-link {
+    position: absolute;
+    right: 50px;
+    font-size: 24px;
+    top: calc(50% - 14px);
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    transition: 0.3s;
+    line-height: 0;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link:hover,
+.portfolio .portfolio-item .portfolio-info .details-link:hover {
+    color: var(--accent-color);
+}
+
+.portfolio .portfolio-item .portfolio-info .details-link {
+    right: 14px;
+    font-size: 28px;
+}
+
+.portfolio .portfolio-item:hover .portfolio-info {
+    opacity: 1;
+    bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Team Section
+--------------------------------------------------------------*/
+.team {
+    --background-color: color-mix(in srgb, var(--accent-color), transparent 96%);
+}
+
+.team .team-member {
+    box-shadow: 0px 2px 15px color-mix(in srgb, var(--default-color), transparent 90%);
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.team .team-member .member-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.team .team-member .social {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 40px;
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+    background: color-mix(in srgb, var(--contrast-color), transparent 20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team .team-member .social a {
+    transition: color 0.3s;
+    color: var(--heading-color);
+    margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team .team-member .social a i {
+    line-height: 0;
+}
+
+.team .team-member .social a:hover {
+    color: var(--accent-color);
+}
+
+.team .team-member .social i {
+    font-size: 18px;
+    margin: 0 2px;
+}
+
+.team .team-member .member-info {
+    background-color: var(--contrast-color);
+    padding: 25px 15px;
+    text-align: center;
+}
+
+.team .team-member .member-info h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.team .team-member .member-info span {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.team .team-member .member-info p {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 26px;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.team .team-member:hover .social {
+    opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Pricing Section
+--------------------------------------------------------------*/
+.pricing .pricing-item {
+    box-shadow: 0px 0px 4px color-mix(in srgb, var(--default-color), transparent 90%);
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing .pricing-item h3 {
+    font-weight: 400;
+    margin: -20px -20px 20px -20px;
+    padding: 20px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    background: color-mix(in srgb, var(--default-color), transparent 95%);
+}
+
+.pricing .pricing-item h4 {
+    font-size: 36px;
+    font-weight: 600;
+    font-family: var(--heading-font);
+}
+
+.pricing .pricing-item h4 sup {
+    font-size: 20px;
+    top: -15px;
+    left: -3px;
+}
+
+.pricing .pricing-item h4 span {
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.pricing .pricing-item ul {
+    padding: 15px 0;
+    list-style: none;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.pricing .pricing-item ul li {
+    padding-bottom: 16px;
+}
+
+.pricing .pricing-item ul i {
+    color: var(--accent-color);
+    font-size: 18px;
+    padding-right: 4px;
+}
+
+.pricing .pricing-item ul .na {
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+    text-decoration: line-through;
+}
+
+.pricing .btn-wrap {
+    background: color-mix(in srgb, var(--default-color), transparent 95%);
+    margin: 0 -20px -20px -20px;
+    padding: 20px 15px;
+    text-align: center;
+}
+
+.pricing .btn-buy {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    display: inline-block;
+    padding: 8px 35px 10px 35px;
+    border-radius: 4px;
+    transition: none;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.pricing .btn-buy:hover {
+    background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.pricing .featured h3 {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+}
+
+.pricing .advanced {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    width: 200px;
+    position: absolute;
+    top: 18px;
+    right: -68px;
+    transform: rotate(45deg);
+    z-index: 1;
+    font-size: 14px;
+    padding: 1px 0 3px 0;
+}
+
+/*--------------------------------------------------------------
+# Faq Section
+--------------------------------------------------------------*/
+.faq {
+    --background-color: color-mix(in srgb, var(--accent-color), transparent 96%);
+}
+
+.faq .faq-container .faq-item {
+    background-color: var(--contrast-color);
+    position: relative;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.faq .faq-container .faq-item:last-child {
+    margin-bottom: 0;
+}
+
+.faq .faq-container .faq-item h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 30px 0 0;
+    transition: 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.faq .faq-container .faq-item h3 .num {
+    color: var(--accent-color);
+    padding-right: 5px;
+}
+
+.faq .faq-container .faq-item h3:hover {
+    color: var(--accent-color);
+}
+
+.faq .faq-container .faq-item .faq-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 0.3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.faq .faq-container .faq-item .faq-content p {
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.faq .faq-container .faq-item .faq-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 16px;
+    line-height: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.faq .faq-container .faq-item .faq-toggle:hover {
+    color: var(--accent-color);
+}
+
+.faq .faq-container .faq-active {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--contrast-color);
+}
+
+.faq .faq-container .faq-active h3 {
+    color: var(--contrast-color);
+}
+
+.faq .faq-container .faq-active .faq-content {
+    grid-template-rows: 1fr;
+    visibility: visible;
+    opacity: 1;
+    padding-top: 10px;
+}
+
+.faq .faq-container .faq-active .faq-toggle {
+    transform: rotate(90deg);
+    color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contact .info-wrap {
+    box-shadow: 0px 0px 20px color-mix(in srgb, var(--default-color), transparent 90%);
+    padding: 30px;
+}
+
+@media (max-width: 575px) {
+    .contact .info-wrap {
+        padding: 20px;
+    }
+}
+
+.contact .info-item {
+    margin-bottom: 40px;
+}
+
+.contact .info-item i {
+    font-size: 20px;
+    color: var(--accent-color);
+    background: color-mix(in srgb, var(--accent-color), transparent 92%);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    margin-right: 15px;
+}
+
+.contact .info-item h3 {
+    font-size: 20px;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.contact .info-item p {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.contact .info-item:hover i {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+}
+
+.contact .php-email-form {
+    height: 100%;
+    padding: 30px;
+    /* box-shadow: 0px 0px 20px color-mix(in srgb, var(--default-color), transparent 90%); */
+}
+
+#newLetter .container {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+#newLetter .card {
+    border: none;
+    border-radius: 0;
+}
+
+#newLetter .card .card-header {
+    border: none;
+    background: none;
+}
+
+#newLetter .card .card-header i {
+    font-size: 26px;
+    color: #fff;
+    background: var(--accent-color);
+    padding: 10px 13px;
+    border-radius: 100%;
+}
+
+.footer #newLetter .container .row .col-xl-3 .card .card-body h6 {
+    font-size: 14px !important;
+    font-weight: 600;
+
+}
+
+
+
+@media (max-width: 575px) {
+    .contact .php-email-form {
+        padding: 20px;
+    }
+}
+
+.contact .php-email-form .error-message {
+    display: none;
+    background: #df1529;
+    color: #ffffff;
+    text-align: left;
+    padding: 15px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.contact .php-email-form .sent-message {
+    display: none;
+    color: #ffffff;
+    background: #059652;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+    display: none;
+    background: var(--background-color);
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 24px;
+}
+
+.contact .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid var(--accent-color);
+    border-top-color: var(--background-color);
+    animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input[type=text],
+.contact .php-email-form input[type=email],
+.contact .php-email-form textarea {
+    font-size: 14px;
+    padding: 10px 15px;
+    box-shadow: none;
+    border-radius: 0;
+    color: var(--default-color);
+    background-color: #F1F5F6;
+    border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.contact .php-email-form input[type=text]:focus,
+.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form textarea:focus {
+    border-color: var(--accent-color);
+}
+
+.contact .php-email-form input[type=text]::placeholder,
+.contact .php-email-form input[type=email]::placeholder,
+.contact .php-email-form textarea::placeholder {
+    color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.contact .php-email-form button[type=submit] {
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    border: 0;
+    padding: 10px 30px;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+    background: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*--------------------------------------------------------------
+# Service Details Section
+--------------------------------------------------------------*/
+.service-details .services-list {
+    padding: 10px 30px;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    margin-bottom: 20px;
+}
+
+.service-details .services-list a {
+    display: block;
+    line-height: 1;
+    padding: 8px 0 8px 15px;
+    border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
+    margin: 20px 0;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    transition: 0.3s;
+}
+
+.service-details .services-list a.active {
+    color: var(--heading-color);
+    font-weight: 700;
+    border-color: var(--accent-color);
+}
+
+.service-details .services-list a:hover {
+    border-color: var(--accent-color);
+}
+
+.service-details .services-img {
+    margin-bottom: 20px;
+}
+
+.service-details h3 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.service-details h4 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.service-details p {
+    font-size: 15px;
+}
+
+.service-details ul {
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+}
+
+.service-details ul li {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.service-details ul i {
+    font-size: 20px;
+    margin-right: 8px;
+    color: var(--accent-color);
+}
+
+.myfirstdonut svg {
+    width: 250px !important;
+    height: 250px !important;
+}
+
+/*--------------------------------------------------------------
+# HOMELOAN Section
+--------------------------------------------------------------*/
+
+.homeloan.section {
+    padding-top: 0 !important;
+    padding-bottom: 100px;
+    background-color: var(--accent-color);
+    height: 300px;
+}
+
+.homeloan h1 {
+    height: 100%;
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 192px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.homeloan.section .container .image {
+    background-image: url(../img/homeloan.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 200px;
+    z-index: 99;
+    margin: 30px 100px;
+    background-position: center;
+}
+
+.homeloan-content {
+    padding-top: 180px;
+}
+
+.homeloan-content .h2 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #000;
+}
+
+.homeloan-content .text {
+    line-height: 35px;
+    word-spacing: 5px;
+    font-size: 18px;
+    color: #000;
+}
+
+.query-button .btn {
+    border-radius: 0;
+    padding: 10px 30px;
+    font-weight: 600;
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+.query-button .btn.btn-outline-primary {
+    border-color: var(--accent-color);
+}
+
+.query-button .btn.btn-outline-primary:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+.query-button .btn.btn-primary {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.query-button .btn.btn-primary:hover {
+    background: none;
+    color: var(--accent-color);
+}
+
+.input-amount {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    transition: border 0.3s ease;
+    border-bottom: 1px solid lightgrey;
+}
+
+.input-amount:focus {
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.homeloan-progress h5 {
+    font-weight: 700 !important;
+    font-size: 20px;
+    color: #000;
+}
+
+.input-amount-wrapper {
+    position: relative;
+}
+
+.rupee-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 23px;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.input-amount::placeholder {
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+}
+
+.slider-wrapper {
+    width: 100%;
+    margin: 20px 0px 70px 10px;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 21px;
+    height: 21px;
+    right: -17px;
+    top: -7px;
+}
+
+.noUi-handle {
+    border: 1px solid #D9D9D9;
+    border-radius: 100%;
+    background: #33609F;
+    cursor: default;
+    box-shadow: none;
+}
+
+.range1,
+.range2,
+.range3 {
+    padding: 0px 35px;
+}
+
+.noUi-connect {
+    background: var(--accent-color);
+}
+
+.noUi-horizontal {
+    height: 8px;
+}
+
+.noUi-target {
+    background: #E9E9E9;
+    border-radius: 0px;
+    border: none;
+    /* box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB; */
+}
+
+.noUi-handle:after,
+.noUi-handle:before {
+    content: "";
+    display: none;
+    position: absolute;
+    height: 14px;
+    width: 1px;
+    background: #E8E7E6;
+    left: 14px;
+    top: 5px;
+}
+
+.noUi-handle:after {
+    left: 10px;
+}
+
+.noUi-marker-large {
+    background: #000;
+}
+
+.noUi-marker-normal {
+    display: none;
+}
+
+.noUi-marker-horizontal.noUi-marker-large {
+    height: 10px;
+}
+
+.noUi-value {
+    color: #000;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.noUi-tooltip {
+    display: none;
+
+}
+
+.homeloan-progress .card {
+    border: 2px solid rgb(199, 199, 199);
+    border-radius: 0;
+}
+
+.homeloan-progress .card .card-body {
+    display: flex;
+    gap: 20px;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-weight: 600;
+}
+
+.homeloan-progress .card .card-body img {
+    background-image: url(../img/bg-color.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12px;
+    width: 55px;
+    height: auto;
+}
+
+.homeloan-progress .card .card-body span {
+    width: 165px;
+}
+
+.homeloan-progress .card .card-body button {
+    background-color: #4ebee7;
+    color: #fff;
+    font-weight: 600;
+    height: 40px;
+}
+
+.homeloan-progress .card .card-footer i {
+    background-color: #4ebee7;
+    padding: 10px;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.homeloan-progress .card .card-footer h6 {
+    font-weight: 700;
+}
+
+.homeloan-progress .card .card-footer p {
+    font-size: 14px;
+}
+
+
+.morris-hover {
+    position: absolute;
+    z-index: 1000;
+}
+
+.morris-hover.morris-default-style {
+    border-radius: 10px;
+    padding: 6px;
+    color: #666;
+    background: rgba(255, 255, 255, 0.8);
+    border: solid 2px rgba(230, 230, 230, 0.8);
+    font-family: sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+
+.morris-hover.morris-default-style .morris-hover-row-label {
+    font-weight: bold;
+    margin: 0.25em 0;
+}
+
+.morris-hover.morris-default-style .morris-hover-point {
+    white-space: nowrap;
+    margin: 0.1em 0;
+}
+
+svg {
+    width: 100%;
+}
+
+.chart-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.chart-content .dark-blue {
+    height: 15px;
+    width: 15px;
+    border: 1px solid rgb(129, 129, 129);
+    background-color: #33609F;
+}
+
+.chart-content .light-blue {
+    height: 15px;
+    width: 15px;
+    border: 1px solid rgb(184, 184, 184);
+    background-color: #71CBEC;
+}
+
+.enquiry-form {
+    background: #f1f1f1;
+}
+
+
+.enquiry-form h2 {
+    font-weight: 700;
+    font-size: 34px;
+}
+
+.enquiry-form form .form-control {
+    border-radius: 0;
+    padding: 10px;
+}
+
+.input-flag {
+    background-image: url('https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg');
+    background-repeat: no-repeat;
+    background-size: 20px 14px;
+    background-position: left 10px center;
+    padding-left: 35px;
+    /* Adjust padding to make space for the flag */
+}
+
+.input-flag::placeholder {
+    font-size: 20px;
+    color: #000;
+    font-weight: 600;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px 15px 10px 40px;
+    /* Adjust padding to fit the flag and text */
+    font-size: 16px;
+    border: 1px solid #dee2e6
+}
+
+.input-container input:focus {
+    outline: none;
+    border: none;
+    border-radius: 0;
+
+}
+
+.send-query-button {
+    background: var(--accent-color);
+    color: #fff;
+    font-size: 20px;
+    border-radius: 0;
+    padding: 9px 26px;
+    font-weight: 700;
+}
+
+/*--------------------------------------------------------------
+# HOMELOAN Section END
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# AGAINST PROPERT LOAN SECTION
+--------------------------------------------------------------*/
+
+.againstPropertyLoan.section {
+    padding-top: 0 !important;
+    padding-bottom: 100px;
+    background-color: var(--accent-color);
+    height: 300px;
+}
+
+.againstPropertyLoan h1 {
+    height: 100%;
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 192px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.againstPropertyLoan.section .container .image {
+    background-image: url(../img/againstPropertyLoan.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 200px;
+    z-index: 99;
+    margin: 30px 100px;
+    background-position: center;
+}
+
+.againstPropertyLoan-content {
+    padding-top: 180px;
+}
+
+.againstPropertyLoan-content .h2 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #000;
+}
+
+.againstPropertyLoan-content .text {
+    line-height: 35px;
+    word-spacing: 5px;
+    font-size: 18px;
+    color: #000;
+}
+
+.againstPropertyLoan-progress h5 {
+    font-weight: 700 !important;
+    font-size: 20px;
+    color: #000;
+}
+
+.againstPropertyLoan-progress .card {
+    border: 2px solid rgb(199, 199, 199);
+    border-radius: 0;
+}
+
+.againstPropertyLoan-progress .card .card-body {
+    display: flex;
+    gap: 20px;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-weight: 600;
+}
+
+.againstPropertyLoan-progress .card .card-body img {
+    background-image: url(../img/bg-color.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12px;
+    width: 55px;
+    height: auto;
+}
+
+.againstPropertyLoan-progress .card .card-body span {
+    width: 165px;
+}
+
+.againstPropertyLoan-progress .card .card-body button {
+    background-color: #4ebee7;
+    color: #fff;
+    font-weight: 600;
+    height: 40px;
+}
+
+.againstPropertyLoan-progress .card .card-footer i {
+    background-color: #4ebee7;
+    padding: 10px;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.againstPropertyLoan-progress .card .card-footer h6 {
+    font-weight: 700;
+}
+
+.againstPropertyLoan-progress .card .card-footer p {
+    font-size: 14px;
+}
+
+/*--------------------------------------------------------------
+# AGAINST PROPERT LOAN SECTION END
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# PERSONAL LOAN SECTION
+--------------------------------------------------------------*/
+
+.personalLoan.section {
+    padding-top: 0 !important;
+    padding-bottom: 100px;
+    background-color: var(--accent-color);
+    height: 300px;
+}
+
+.personalLoan h1 {
+    height: 100%;
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 192px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.personalLoan.section .container .image {
+    background-image: url(../img/personalLoan.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 200px;
+    z-index: 99;
+    margin: 30px 100px;
+    background-position: center;
+}
+
+.personalLoan-content {
+    padding-top: 180px;
+}
+
+.personalLoan-content .h2 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #000;
+}
+
+.personalLoan-content .text {
+    line-height: 35px;
+    word-spacing: 5px;
+    font-size: 18px;
+    color: #000;
+}
+
+.personalLoan-progress h5 {
+    font-weight: 700 !important;
+    font-size: 20px;
+    color: #000;
+}
+
+.personalLoan-progress .card {
+    border: 2px solid rgb(199, 199, 199);
+    border-radius: 0;
+}
+
+.personalLoan-progress .card .card-body {
+    display: flex;
+    gap: 20px;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-weight: 600;
+}
+
+.personalLoan-progress .card .card-body img {
+    background-image: url(../img/bg-color.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12px;
+    width: 55px;
+    height: auto;
+}
+
+.personalLoan-progress .card .card-body span {
+    width: 165px;
+}
+
+.personalLoan-progress .card .card-body button {
+    background-color: #4ebee7;
+    color: #fff;
+    font-weight: 600;
+    height: 40px;
+}
+
+.personalLoan-progress .card .card-footer i {
+    background-color: #4ebee7;
+    padding: 10px;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.personalLoan-progress .card .card-footer h6 {
+    font-weight: 700;
+}
+
+.personalLoan-progress .card .card-footer p {
+    font-size: 14px;
+}
+
+
+/*--------------------------------------------------------------
+# PERSONAL LOAN SECTION END
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# BUSINESS LOAN SECTION
+--------------------------------------------------------------*/
+
+.businessLoan.section {
+    padding-top: 0 !important;
+    padding-bottom: 100px;
+    background-color: var(--accent-color);
+    height: 260px;
+}
+
+.businessLoan h1 {
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 170px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.businessLoan.section .container .image {
+    background-image: url(../img/businessLoan.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 170px;
+    z-index: 99;
+    margin: 30px 100px;
+    background-position: center;
+}
+
+.businessLoan-content {
+    padding-top: 180px;
+}
+
+.businessLoan-content .h2 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #000;
+}
+
+.businessLoan-content .text {
+    line-height: 35px;
+    word-spacing: 5px;
+    font-size: 18px;
+    color: #000;
+}
+
+.businessLoan-progress h5 {
+    font-weight: 700 !important;
+    font-size: 20px;
+    color: #000;
+}
+
+.businessLoan-progress .card {
+    border: 2px solid rgb(199, 199, 199);
+    border-radius: 0;
+}
+
+.businessLoan-progress .card .card-body {
+    display: flex;
+    gap: 20px;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-weight: 600;
+}
+
+.businessLoan-progress .card .card-body img {
+    background-image: url(../img/bg-color.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12px;
+    width: 55px;
+    height: auto;
+}
+
+.businessLoan-progress .card .card-body span {
+    width: 165px;
+}
+
+.businessLoan-progress .card .card-body button {
+    background-color: #4ebee7;
+    color: #fff;
+    font-weight: 600;
+    height: 40px;
+}
+
+.businessLoan-progress .card .card-footer i {
+    background-color: #4ebee7;
+    padding: 10px;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.businessLoan-progress .card .card-footer h6 {
+    font-weight: 700;
+}
+
+.businessLoan-progress .card .card-footer p {
+    font-size: 14px;
+}
+
+
+/*--------------------------------------------------------------
+# BUSINESS LOAN SECTION END
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# WORKING CAPITAL LOAN SECTION
+--------------------------------------------------------------*/
+
+.capital.section {
+    padding-top: 0 !important;
+    padding-bottom: 100px;
+    background-color: var(--accent-color);
+    height: 300px;
+}
+
+.capital h1 {
+    height: 100%;
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 192px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.capital.section .container .image {
+    background-image: url(../img/capital.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 200px;
+    z-index: 99;
+    margin: 30px 100px;
+    background-position: center;
+}
+
+.capital-content {
+    padding-top: 180px;
+}
+
+.capital-content .h2 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #000;
+}
+
+.capital-content .text {
+    line-height: 35px;
+    word-spacing: 5px;
+    font-size: 18px;
+    color: #000;
+}
+
+.capital-progress h5 {
+    font-weight: 700 !important;
+    font-size: 20px;
+    color: #000;
+}
+
+.capital-progress .card {
+    border: 2px solid rgb(199, 199, 199);
+    border-radius: 0;
+}
+
+.capital-progress .card .card-body {
+    display: flex;
+    gap: 20px;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-weight: 600;
+}
+
+.capital-progress .card .card-body img {
+    background-image: url(../img/bg-color.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12px;
+    width: 55px;
+    height: auto;
+}
+
+.capital-progress .card .card-body span {
+    width: 165px;
+}
+
+.capital-progress .card .card-body button {
+    background-color: #4ebee7;
+    color: #fff;
+    font-weight: 600;
+    height: 40px;
+}
+
+.capital-progress .card .card-footer i {
+    background-color: #4ebee7;
+    padding: 10px;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.capital-progress .card .card-footer h6 {
+    font-weight: 700;
+}
+
+.capital-progress .card .card-footer p {
+    font-size: 14px;
+}
+
+
+/*--------------------------------------------------------------
+# WORKING CAPITAL LOAN SECTION END
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# ABOUT US SECTION
+--------------------------------------------------------------*/
+
+.about.section {
+    padding-top: 0 !important;
+    padding-bottom: 100px;
+    background-color: var(--accent-color);
+    height: 19rem;
+}
+
+.about h1 {
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 192px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.about.section .container .image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 260px;
+}
+
+.about.section .container .image img {
+    padding: 0rem 5rem;
+}
+
+.about-contentt {
+    padding-top: 180px;
+}
+
+.about-contentt .h2 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #000;
+}
+
+.about-contentt .text {
+    line-height: 35px;
+    word-spacing: 5px;
+    font-size: 18px;
+    color: #000;
+}
+
+.logo-set {
+    box-shadow: 0px 0px 12px 2px #efefef;
+    ;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 14px;
+}
+
+
+
+/*--------------------------------------------------------------
+# ABOUT US SECTION END
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# CONTACT US SECTION
+--------------------------------------------------------------*/
+
+.contact-us.section {
+    padding-top: 0 !important;
+    padding-bottom: 100px;
+    background-color: var(--accent-color);
+    height: 290px;
+}
+
+.contact-us h1 {
+    /* height: 100%; */
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 182px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 45px;
+}
+
+.contact-us.section .container .image {
+    background-image: url(../img/contactpage.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 180px;
+    z-index: 99;
+    margin: 30px 100px;
+    background-position: center;
+}
+
+.contact-part {
+    padding-top: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+}
+
+.contact-part .php-email-form {
+    height: 100%;
+    padding: 45px;
+
+}
+
+.contact-part .php-email-form input[type=text],
+.contact-part .php-email-form input[type=email],
+.contact-part .php-email-form textarea,
+.contact-part .php-email-form select {
+    font-size: 14px;
+    padding: 10px 15px;
+    box-shadow: none;
+    border-radius: 0;
+    color: var(--default-color);
+    background-color: #F1F5F6;
+    border-color:
+        color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.contact-part label {
+    font-size: 14px;
+}
+
+.contact-part .php-email-form button[type=submit] {
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    border: 0;
+    padding: 10px 30px;
+    transition: 0.4s;
+    border-radius: 0;
+}
+
+
+/*--------------------------------------------------------------
+# CONTACT US SECTION END
+--------------------------------------------------------------*/
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Portfolio Details Section
+--------------------------------------------------------------*/
+.portfolio-details .portfolio-details-slider img {
+    width: 100%;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+    opacity: 1;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--accent-color);
+}
+
+.portfolio-details .portfolio-info {
+    padding: 30px;
+    box-shadow: 0px 0 30px color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.portfolio-details .portfolio-info h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.portfolio-details .portfolio-info ul {
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li+li {
+    margin-top: 10px;
+}
+
+.portfolio-details .portfolio-description {
+    padding-top: 30px;
+}
+
+.portfolio-details .portfolio-description h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-description p {
+    padding: 0;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+/*--------------------------------------------------------------
+# Starter Section Section
+--------------------------------------------------------------*/
+.starter-section {
+    /* Add your styles here */
+}
